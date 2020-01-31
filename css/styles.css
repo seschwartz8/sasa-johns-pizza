@@ -115,3 +115,10 @@ label.address-fields {
   background-color: #008763;
   padding: 5px 10px;
 }
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
