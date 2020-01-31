@@ -4,15 +4,12 @@ class Pizza {
     this.toppings = [];
     this.price = 0;
   }
-
   setSize(size) {
     this.size = size;
   }
- 
   getSize() {
     return this.size;
   }
-
   setToppings(selectedTopping) {
     if (!this.toppings.includes(selectedTopping)) {
       this.toppings.push(selectedTopping);
@@ -23,11 +20,9 @@ class Pizza {
       })
     }
   }
-
   getToppings() {
     return this.toppings;
   }
-
   setPrice(size, toppings) {
     if (size === "small") {
       this.price = 10;
@@ -38,7 +33,6 @@ class Pizza {
     }
     this.price += 0.50 * toppings.length;
   }
-
   getPrice() {
     return this.price;
   }
@@ -62,13 +56,26 @@ function displayToppings(toppingList) {
 function displayOrder(pizza) {
   $(".form-content").hide();
   $(".form-results").show();
-  $('#size-result').append(`<li>${pizza.getSize()}</li>`);
-  $('#toppings-result').append(`<li>${pizza.getToppings()}</li>`);
+
+  // Make size prettier to display
+  let size = pizza.getSize();
+  let displaySize = size.charAt(0).toUpperCase() + size.slice(1);
+  $('#size-result').append(`<li>${displaySize}</li>`);
+
+  // Make toppings list prettier to display
+  let toppings = pizza.getToppings();
+  let displayToppingsArray = toppings.map(function(topping){
+      return topping.charAt(0).toUpperCase() + topping.slice(1);
+  });
+  let displayToppingsStr = displayToppingsArray.join(", ")
+  $('#toppings-result').append(`<li>${displayToppingsStr}</li>`);
+  
+  // Display final price
   $('#price-result').append(`<li>${pizza.getPrice()}</li>`);
 }
 
 
-// USER INTERFACE LOGIC
+///// USER INTERFACE jQUERY /////
 $(document).ready(function(){
   let pizza = new Pizza();
   displayPrice(pizza);
@@ -100,23 +107,12 @@ $(document).ready(function(){
       }
     });
 
+    // On submit of form (confirm order)
     $("#results-form").submit(function(event){
       event.preventDefault();
       $(".form-results").empty();
       $(".form-results").append("<h4>Order Submitted!</h4>");
-
     })
   });
-    
-
-
-
   
-});
-
-
-$("input:checkbox[name=toppings]:checked").each(function(){
-  let topping = $(this.val());
-  userToppings.push(topping);
-  $('.topping-imgs').append(`<img src="img/${topping}"></img>`);
 });
