@@ -13,19 +13,19 @@ body {
 .top-nav {
   color: white;
   background-color: #AB131B;
-  height: 75px;
+  height: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 #logo {
-  height: 75px;
+  height: 70px;
 }
 
 .second-nav {
   background-color: white;
-  height: 75px;
+  height: 60px;
   margin-bottom: 20px;
   display: flex;
   justify-content: left;
@@ -70,6 +70,17 @@ form {
   flex-direction: column;
 }
 
+.form-results {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.address-fields {
+  display: none;
+}
+
 .size {
   margin-left: 10px;
 }
@@ -78,7 +89,7 @@ form {
 }
 
 .heading {
-  padding: 40px;
+  padding: 30px;
   background-color: #008763;
   border-radius: 10px 10px 0 0;
   color: white;

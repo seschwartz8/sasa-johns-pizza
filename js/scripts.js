@@ -36,7 +36,7 @@ class Pizza {
     } else if (size === "large") {
       this.price = 15;
     }
-    this.price += 0.5 * toppings.length;
+    this.price += 0.50 * toppings.length;
   }
 
   getPrice() {
@@ -65,14 +65,14 @@ $(document).ready(function(){
   let pizza = new Pizza();
   displayPrice(pizza);
 
-  // On radio click (select size)
+  // On click for radio (selecting size)
   $("input#size").click(function(){
     let size = $('input[name=size]:checked').val();
     pizza.setSize(size);
     displayPrice(pizza);
   });
 
-  // On checkbox click (select toppings)
+  // On click for checkbox (selecting/unselecting toppings)
   $("input#topping").click(function(){
     let currentTopping = $(this).val();
     console.log("toppings before" + pizza.getToppings())
@@ -82,13 +82,26 @@ $(document).ready(function(){
     displayToppings(pizza.getToppings());
   })
 
-  
+  // On submit of form (finish pizza order)
   $("form").submit(function(event){
     event.preventDefault();
+    $(".form-content").hide();
+    $(".form-results").show();
 
 
-  })
-})
+    $("input#delivery").click(function(){
+      if ($("#delivery").val() === "yes") {
+        $(".address-fields").show();
+      }
+    });
+  
+  });
+    
+
+
+
+  
+});
 
 
 $("input:checkbox[name=toppings]:checked").each(function(){
