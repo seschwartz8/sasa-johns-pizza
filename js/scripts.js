@@ -44,15 +44,12 @@ function displayPrice(pizza) {
   $(".price").append(`<h5>Current Price: ${price}</h5>`)
 }
 
-function displayToppings(toppings) {
+function displayToppings(toppingList) {
   $('.topping-imgs').empty();
-  let userToppings = [];
-  $("input:checkbox[name=toppings]:checked").each(function(){
-    let topping = $(this.val());
-    userToppings.push(topping);
-    $('.topping-imgs').append(`<img src="img/${topping}"></img>`);
-  });
-  return userToppings;
+  for (let i = 0; i < toppingList.length; i++) {
+    let toppingName = toppingList[i];
+    $('.topping-imgs').append(`<img src="img/${toppingName}.png"></img>`);
+  }
 }
 
 
@@ -69,7 +66,11 @@ $(document).ready(function(){
   });
 
   // On checkbox click (select toppings)
-
+  $("input#topping").click(function(){
+    let currentTopping = $(this).val();
+    // NEED TO UPDATE PIZZA ITEM AND PRICE AND PASS REAL ARRAY
+    displayToppings([currentTopping]);
+  })
 
   
 
@@ -79,3 +80,10 @@ $(document).ready(function(){
 
   })
 })
+
+
+$("input:checkbox[name=toppings]:checked").each(function(){
+  let topping = $(this.val());
+  userToppings.push(topping);
+  $('.topping-imgs').append(`<img src="img/${topping}"></img>`);
+});
