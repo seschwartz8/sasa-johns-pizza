@@ -23,29 +23,29 @@ body {
 .second-nav {
   background-color: white;
   height: 75px;
+  margin-bottom: 20px;
 }
 
 .container {
-  border: 1px solid yellow;
   display: flex;
   justify-content: space-between;
+  min-width: 800px;
+  margin-bottom: 50px;
 }
 
 .display {
-  border: 1px solid red;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .display img {
-  width: 300px;
+  width: 80%;
 }
 
 .topping-imgs img {
-  height: 50px;
+  width: 18%;
 }
 
 form {
@@ -76,4 +76,16 @@ form {
 
 .heading h3 {
   font-size: 2em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin-top: 20px;
+  color: white;
+  background-color: #008763;
+  padding: 5px 10px;
 }
