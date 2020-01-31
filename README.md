@@ -15,7 +15,7 @@ This is a Friday project for the Epicodus Bootcamp. The website is a play on "Pa
 ##### The user can select pizza toppings.
 * Example input: Pepperoni
 * Example output: 
-##### Price adjusts according to number of toppings selected.
+##### Price adjusts and displays according to number of toppings selected.
 * Example input: Pepperoni and Peppers
 * Example output: Price displayed increases by $0.50 each.
 ##### Images of toppings appear that correspond to the user's choices.
