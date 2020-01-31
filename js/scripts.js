@@ -18,12 +18,9 @@ class Pizza {
       this.toppings.push(selectedTopping);
     }
     else {
-      let toppingsCopy = [... this.toppings];
-      for (let i = 0; i < toppingsCopy.length; i++) {
-        if (toppingsCopy[i] === selectedTopping) {
-          this.toppings.pop(i);
-        }
-      }
+      this.toppings = this.toppings.filter(function(topping){
+        return (topping != selectedTopping);
+      })
     }
   }
 
@@ -78,8 +75,9 @@ $(document).ready(function(){
   // On checkbox click (select toppings)
   $("input#topping").click(function(){
     let currentTopping = $(this).val();
+    console.log("toppings before" + pizza.getToppings())
     pizza.setToppings(currentTopping);
-    console.log(pizza.getToppings());
+    console.log("toppings after" + pizza.getToppings());
     displayPrice(pizza);
     displayToppings(pizza.getToppings());
   })
