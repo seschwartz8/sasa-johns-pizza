@@ -59,6 +59,14 @@ function displayToppings(toppingList) {
   }
 }
 
+function displayOrder(pizza) {
+  $(".form-content").hide();
+  $(".form-results").show();
+  $('#size-result').append(`<li>${pizza.getSize()}</li>`);
+  $('#toppings-result').append(`<li>${pizza.getToppings()}</li>`);
+  $('#price-result').append(`<li>${pizza.getPrice()}</li>`);
+}
+
 
 // USER INTERFACE LOGIC
 $(document).ready(function(){
@@ -75,26 +83,29 @@ $(document).ready(function(){
   // On click for checkbox (selecting/unselecting toppings)
   $("input#topping").click(function(){
     let currentTopping = $(this).val();
-    console.log("toppings before" + pizza.getToppings())
     pizza.setToppings(currentTopping);
-    console.log("toppings after" + pizza.getToppings());
     displayPrice(pizza);
     displayToppings(pizza.getToppings());
   })
 
   // On submit of form (finish pizza order)
-  $("form").submit(function(event){
+  $("#order-form").submit(function(event){
     event.preventDefault();
-    $(".form-content").hide();
-    $(".form-results").show();
+    displayOrder(pizza);
 
-
+    // On click for radio (selecting delivery/pickup)
     $("input#delivery").click(function(){
       if ($("#delivery").val() === "yes") {
         $(".address-fields").show();
       }
     });
-  
+
+    $("#results-form").submit(function(event){
+      event.preventDefault();
+      $(".form-results").empty();
+      $(".form-results").append("<h4>Order Submitted!</h4>");
+
+    })
   });
     
 

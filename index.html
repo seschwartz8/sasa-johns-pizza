@@ -33,71 +33,73 @@
       <div class="topping-imgs"></div>
     </div>
 
-    <form>
-      <div class="heading">
-        <h3>Build Your Pizza</h3>
-      </div>
-      <div class="form-content">
-        <div class="size">
-          <h4>Choose your size</h4>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="size" id="size" value="small" checked>
-            <label class="form-check-label" for="small">
-              Small
-            </label>
+    <div class="build-pizza">
+      <form id="order-form">
+        <div class="heading">
+          <h3>Build Your Pizza</h3>
+        </div>
+        <div class="form-content">
+          <div class="size">
+            <h4>Choose your size</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="size" value="small" checked>
+              <label class="form-check-label" for="small">
+                Small
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="size" value="medium">
+              <label class="form-check-label" for="medium">
+                Medium
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="size" id="size" value="large">
+              <label class="form-check-label" for="large">
+                Large
+              </label>
+            </div>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="size" id="size" value="medium">
-            <label class="form-check-label" for="medium">
-              Medium
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="size" id="size" value="large">
-            <label class="form-check-label" for="large">
-              Large
-            </label>
+    
+          <div class="toppings">
+            <h4>Pick your toppings</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="pepperoni" id="topping">
+              <label class="form-check-label" for="pepperoni">
+                Pepperoni
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="mushrooms" id="topping">
+              <label class="form-check-label" for="mushrooms">
+                Mushrooms
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="olives" id="topping">
+              <label class="form-check-label" for="olives">
+                Olives
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="peppers" id="topping">
+              <label class="form-check-label" for="peppers">
+                Peppers
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="artichokes" id="topping">
+              <label class="form-check-label" for="artichokes">
+                Artichoke Hearts
+              </label>
+            </div>
+            <div class="button-container">
+              <button class="btn" type="submit">Order</button>
+            </div>
           </div>
         </div>
+      </form>
   
-        <div class="toppings">
-          <h4>Pick your toppings</h4>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="pepperoni" id="topping">
-            <label class="form-check-label" for="pepperoni">
-              Pepperoni
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="mushrooms" id="topping">
-            <label class="form-check-label" for="mushrooms">
-              Mushrooms
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="olives" id="topping">
-            <label class="form-check-label" for="olives">
-              Olives
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="peppers" id="topping">
-            <label class="form-check-label" for="peppers">
-              Peppers
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="artichokes" id="topping">
-            <label class="form-check-label" for="artichokes">
-              Artichoke Hearts
-            </label>
-          </div>
-          <div class="button-container">
-            <button class="btn" type="submit">Order</button>
-          </div>
-        </div>
-      </div>
-
       <div class="form-results">
         <h6>Your size:</h6>
         <ul id="size-result"></ul>
@@ -106,7 +108,7 @@
         <h6>Your price:</h6>
         <ul id="price-result"></ul>
 
-        <form class="delivery-options">
+        <form class="delivery-options" id="results-form">
           <h6>Would you like delivery?</h6>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="delivery" id="delivery" value="yes">
@@ -125,12 +127,13 @@
             <label class="address-fields" for="address">Please enter your delivery address</label>
             <input type="text" class="form-control address-fields" id="address">
           </div>
-          <button type="submit" class="btn">Confirm Order</button>
+          <div class="button-container">
+            <button type="submit" class="btn">Confirm Order</button>
+          </div>
         </form>
-        
       </div>
+    </div>
 
-    </form>
 
   </div>
 </body>

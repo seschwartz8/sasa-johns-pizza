@@ -27,6 +27,9 @@ This is a Friday project for the Epicodus Bootcamp. The website is a play on "Pa
 ##### If the user selects delivery, they can input their address.
 * Example input: Select delivery
 * Example input: Address form appears
+##### Upon order submission, user receives confirmation of order.
+* Example input: Submit order
+* Example output: "Order Submitted!" appears on screen.
 
 ## Setup/Installation Requirements
 
