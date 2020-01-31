@@ -68,7 +68,11 @@ function displayOrder(pizza) {
       return topping.charAt(0).toUpperCase() + topping.slice(1);
   });
   let displayToppingsStr = displayToppingsArray.join(", ")
-  $('#toppings-result').append(`<li>${displayToppingsStr}</li>`);
+  if (displayToppingsStr.length > 0) {
+    $('#toppings-result').append(`<li>${displayToppingsStr}</li>`);
+  } else {
+    $('#toppings-result').append(`<li>None</li>`);
+  }
 
   // Display final price
   $('#price-result').append(`<li>$${pizza.getPrice().toFixed(2)}</li>`);
