@@ -5,6 +5,7 @@ Light grey: #F3F3F3
 Medium grey: #E5E4E2
 Dark grey: #555555
 */
+
 body {
   background-color: #F3F3F3;
   font-family: 'Magra', sans-serif;
@@ -81,6 +82,10 @@ body {
   display: none;
 }
 
+label.address-fields {
+  margin-top: 20px;
+}
+
 .size {
   margin-left: 10px;
 }
@@ -89,7 +94,7 @@ body {
 }
 
 .heading {
-  padding: 30px;
+  padding: 20px 30px;
   background-color: #008763;
   border-radius: 10px 10px 0 0;
   color: white;

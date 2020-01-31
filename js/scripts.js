@@ -40,9 +40,9 @@ class Pizza {
 
 function displayPrice(pizza) {
   pizza.setPrice(pizza.getSize(), pizza.getToppings());
-  let price = pizza.getPrice();
+  let price = pizza.getPrice().toFixed(2);
   $(".price").empty();
-  $(".price").append(`<h5>Current Price: ${price}</h5>`)
+  $(".price").append(`<h5>Current Price: $${price}</h5>`)
 }
 
 function displayToppings(toppingList) {
@@ -69,9 +69,9 @@ function displayOrder(pizza) {
   });
   let displayToppingsStr = displayToppingsArray.join(", ")
   $('#toppings-result').append(`<li>${displayToppingsStr}</li>`);
-  
+
   // Display final price
-  $('#price-result').append(`<li>${pizza.getPrice()}</li>`);
+  $('#price-result').append(`<li>$${pizza.getPrice().toFixed(2)}</li>`);
 }
 
 
@@ -101,9 +101,12 @@ $(document).ready(function(){
     displayOrder(pizza);
 
     // On click for radio (selecting delivery/pickup)
-    $("input#delivery").click(function(){
-      if ($("#delivery").val() === "yes") {
+    $("input.delivery").click(function(){
+      let delivery = $('input[name=delivery]:checked').val();
+      if (delivery === "yes") {
         $(".address-fields").show();
+      } else {
+        $(".address-fields").hide();
       }
     });
 
