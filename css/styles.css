@@ -15,6 +15,11 @@ body {
   height: 75px;
 }
 
+#logo {
+  height: 75px;
+  margin-left: 30px;
+}
+
 .second-nav {
   background-color: white;
   height: 75px;
@@ -38,4 +43,8 @@ form {
   background-color: #008763;
   border-radius: 10px 10px 0 0;
   color: white;
+}
+
+.heading h3 {
+  font-size: 2em;
 }
