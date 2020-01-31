@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sasa John's Pizza</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <script
     src="https://code.jquery.com/jquery-3.4.1.js"
@@ -14,6 +14,76 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  
+  <div class="top-nav"></div>
+  <div class="second-nav"></div>
+  <div class="container">
+    <div class="display">
+
+    </div>
+
+    <form>
+      <div class="heading">
+        <h3>Build Your Pizza</h3>
+      </div>
+      <div class="size">
+        <h4>Choose your size</h4>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="size" id="small" value="small" checked>
+          <label class="form-check-label" for="small">
+            Small
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
+          <label class="form-check-label" for="medium">
+            Medium
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="size" id="large" value="large">
+          <label class="form-check-label" for="large">
+            Large
+          </label>
+        </div>
+      </div>
+
+      <div class="toppings">
+        <h4>Pick your toppings</h4>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="pepperoni" id="pepperoni">
+          <label class="form-check-label" for="pepperoni">
+            Pepperoni
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="mushrooms" id="mushrooms">
+          <label class="form-check-label" for="mushrooms">
+            Mushrooms
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="olives" id="olives">
+          <label class="form-check-label" for="olives">
+            Olives
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="peppers" id="peppers">
+          <label class="form-check-label" for="peppers">
+            Peppers
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="artichoke" id="artichoke">
+          <label class="form-check-label" for="artichoke">
+            Artichoke Hearts
+          </label>
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
 </body>
 </html>

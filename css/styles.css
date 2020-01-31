@@ -1,0 +1,40 @@
+/* 
+Red: #AB131B 
+Green: #008763
+Light grey: #F3F3F3
+Medium grey: #E5E4E2
+Dark grey: #555555
+*/
+body {
+  background-color: #F3F3F3;
+}
+
+.top-nav {
+  background-color: #AB131B;
+  height: 75px;
+}
+
+.second-nav {
+  background-color: white;
+  height: 75px;
+}
+
+.container {
+  border: 1px solid yellow;
+  height: 100vh;
+}
+
+form {
+  background-color: #E5E4E2;
+  border-radius: 10px;
+}
+
+.heading, .size, .toppings {
+  padding: 40px;
+}
+
+.heading {
+  background-color: #008763;
+  border-radius: 10px 10px 0 0;
+  color: white;
+}

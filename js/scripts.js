@@ -14,11 +14,11 @@ class Pizza {
   }
 
   set price(size, toppings) {
-    if (size === "Small") {
+    if (size === "small") {
       this.price += 10;
-    } else if (size === "Medium") {
+    } else if (size === "medium") {
       this.price += 12;
-    } else if (size === "Large") {
+    } else if (size === "large") {
       this.price += 15;
     }
     this.price += 0.5 * toppings.length;
