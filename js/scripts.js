@@ -13,8 +13,18 @@ class Pizza {
     return this.size;
   }
 
-  setToppings(toppings) {
-    this.toppings.push(toppings);
+  setToppings(selectedTopping) {
+    if (!this.toppings.includes(selectedTopping)) {
+      this.toppings.push(selectedTopping);
+    }
+    else {
+      let toppingsCopy = [... this.toppings];
+      for (let i = 0; i < toppingsCopy.length; i++) {
+        if (toppingsCopy[i] === selectedTopping) {
+          this.toppings.pop(i);
+        }
+      }
+    }
   }
 
   getToppings() {
@@ -68,12 +78,13 @@ $(document).ready(function(){
   // On checkbox click (select toppings)
   $("input#topping").click(function(){
     let currentTopping = $(this).val();
-    // NEED TO UPDATE PIZZA ITEM AND PRICE AND PASS REAL ARRAY
-    displayToppings([currentTopping]);
+    pizza.setToppings(currentTopping);
+    console.log(pizza.getToppings());
+    displayPrice(pizza);
+    displayToppings(pizza.getToppings());
   })
 
   
-
   $("form").submit(function(event){
     event.preventDefault();
 
