@@ -22,6 +22,11 @@ body {
 
 #logo {
   height: 70px;
+  width: 100px;
+  background-image: url(../src/img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .second-nav {
@@ -51,12 +56,13 @@ body {
   align-items: center;
 }
 
-.display img {
+#pizza-img {
   width: 80%;
-}
-
-.topping-imgs img {
-  width: 18%;
+  height: 300px;
+  background-image: url(../src/img/pizza.png);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: center;
 }
 
 .build-pizza {
@@ -114,6 +120,60 @@ label.address-fields {
   color: white;
   background-color: #008763;
   padding: 5px 10px;
+}
+
+
+.topping-imgs div {
+  width: 75px;
+}
+
+.topping-imgs {
+  display: flex;
+  justify-content: space-around;
+}
+
+#pepperoni {
+  height: 75px;
+  background-image: url(../src/img/pepperoni.png);
+  background-repeat: no-repeat;
+  background-size: 75px;
+  background-position: center;
+}
+
+
+#mushrooms {
+  height: 75px;
+  background-image: url(../src/img/mushrooms.png);
+  background-repeat: no-repeat;
+  background-size: 75px;
+  background-position: center;
+}
+
+
+#olives {
+  height: 75px;
+  background-image: url(../src/img/olives.png);
+  background-repeat: no-repeat;
+  background-size: 75px;
+  background-position: center;
+}
+
+
+#peppers {
+  height: 75px;
+  background-image: url(../src/img/peppers.png);
+  background-repeat: no-repeat;
+  background-size: 75px;
+  background-position: center;
+}
+
+
+#artichokes {
+  height: 75px;
+  background-image: url(../src/img/artichokes.png);
+  background-repeat: no-repeat;
+  background-size: 75px;
+  background-position: center;
 }
 
 @media (max-width: 800px) {

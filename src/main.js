@@ -16,7 +16,8 @@ function displayToppings(toppingList) {
   $('.topping-imgs').empty();
   for (let i = 0; i < toppingList.length; i++) {
     let toppingName = toppingList[i];
-    $('.topping-imgs').append(`<img src="../src/img/${toppingName}.png"></img>`);
+    // $('.topping-imgs').append(`<img src="../src/img/${toppingName}.png"></img>`);
+    $('.topping-imgs').append(`<div id="${toppingName}"></div>`);
   }
 }
 
